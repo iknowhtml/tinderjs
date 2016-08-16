@@ -1,4 +1,4 @@
-# tinderjs for li
+# tinderjs for lit
 
   Programmatic access to the Tinder API, modified for use with lit's api.
 
