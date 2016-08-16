@@ -1,6 +1,6 @@
-# tinderjs
+# tinderjs for li
 
-  Programmatic access to the Tinder API
+  Programmatic access to the Tinder API, modified for use with lit's api.
 
 #### Contribution ####
 
