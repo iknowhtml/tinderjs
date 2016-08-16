@@ -224,8 +224,8 @@ function TinderClient() {
    * @param {String} userId the id of the user
    * @param {Function} callback the callback to invoke when the request completes
    */
-  this.like = function(userId, callback) {
-    tinderGet('like/' + userId,
+  this.like = function(userId, contentHash,  callback) {
+    tinderGet('like/' + userId +'/?content_hash' + contentHash,
       null,
       makeTinderCallback(callback));
   };
@@ -236,7 +236,7 @@ function TinderClient() {
    * @param {Function} callback the callback to invoke when the request completes
    */
   this.superLike = function(userId, callback) {
-    tinderPost('like/' + userId + '/super',
+    tinderPost('like/' + userId + '/super' +'/?content_hash' + contentHash,
       null,
       makeTinderCallback(callback));
   };
@@ -247,7 +247,7 @@ function TinderClient() {
    * @param {Function} callback the callback to invoke when the request completes
    */
   this.pass = function(userId, callback) {
-    tinderGet('pass/' + userId,
+    tinderGet('pass/' + userId +'/?content_hast' + contentHash,
       null,
       makeTinderCallback(callback));
   };
@@ -595,6 +595,15 @@ function TinderClient() {
    * Get authenticated user info
    * @param {Function} callback the callback to invoke when the request completes
    */
+
+  this.updatePhotoOrder = function(newOrder, callback) {
+    tinderPut('/media', { change_order: newOrder }, makeTinderCallback(callback));
+  }
+
+  this.getPopularLocation = function(callback) {
+    tinderGet('/location/popular', null, makeTinderCallback(callback));
+  }
+
   this.getProfile = function(callback) {
     console.log('This function is deprecated. Use getAccount(callback) instead.');
     return this.getAccount(callback);
