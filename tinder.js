@@ -224,8 +224,8 @@ function TinderClient() {
    * @param {String} userId the id of the user
    * @param {Function} callback the callback to invoke when the request completes
    */
-  this.like = function(userId, contentHash,  callback) {
-    tinderGet('like/' + userId +'/?content_hash' + contentHash,
+  this.like = function(userId, contentHash, callback) {
+    tinderGet('like/' + userId +'?content_hash=' + contentHash,
       null,
       makeTinderCallback(callback));
   };
@@ -235,8 +235,8 @@ function TinderClient() {
    * @param {String} userId the id of the user
    * @param {Function} callback the callback to invoke when the request completes
    */
-  this.superLike = function(userId, callback) {
-    tinderPost('like/' + userId + '/super' +'/?content_hash' + contentHash,
+  this.superLike = function(userId, contentHash, callback) {
+    tinderPost('like/' + userId + '/super' +'?content_hash=' + contentHash,
       null,
       makeTinderCallback(callback));
   };
@@ -246,8 +246,8 @@ function TinderClient() {
    * @param {String} userId the id of the user
    * @param {Function} callback the callback to invoke when the request completes
    */
-  this.pass = function(userId, callback) {
-    tinderGet('pass/' + userId +'/?content_hast' + contentHash,
+  this.pass = function(userId, contentHash, callback) {
+    tinderGet('pass/' + userId +'?content_hash=' + contentHash,
       null,
       makeTinderCallback(callback));
   };
