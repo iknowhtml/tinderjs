@@ -299,6 +299,13 @@ function TinderClient() {
       },
       makeTinderCallback(callback));
   };
+  
+  this.getHistoryWithDate = function(ISOString, callback) {
+    tinderPost('updates',{
+        last_acitivty_date = ISOString
+    },
+    makeTinderCallback(callback));
+  }
 
   /**
    * Updates the geographical position for the current account 
