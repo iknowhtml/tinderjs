@@ -302,7 +302,7 @@ function TinderClient() {
   
   this.getHistoryWithDate = function(ISOString, callback) {
     tinderPost('updates',{
-        last_acitivty_date = ISOString
+        last_acitivty_date: ISOString
     },
     makeTinderCallback(callback));
   }
