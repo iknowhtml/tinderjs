@@ -282,6 +282,16 @@ function TinderClient() {
         }
       }));
   };
+  
+  this.fetchUpdates = function(fetchAmount, callback) {
+    const x = new Date();
+    x.setSeconds(x.getSeconds() - fetchAmount);
+    tinderPost('updates',
+    {
+      last_activity_date: new Date(x).toISOString()
+    },
+    makeTinderCallback(callback));
+  }
 
   /**
    * Gets the entire history for the current account (all matches, messages, blocks, etc.)
