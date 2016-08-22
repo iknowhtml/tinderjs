@@ -284,8 +284,13 @@ function TinderClient() {
   };
   
   this.fetchUpdates = function(fetchAmount, callback) {
-    const x = new Date();
-    x.setSeconds(x.getSeconds() - fetchAmount);
+    var x;
+    if (typeof (fetchAmount) === 'string') {
+      x = fetchAmount;
+    } else {
+      x = new Date();
+      x.setSeconds(x.getSeconds() - fetchAmount);
+    }
     tinderPost('updates',
     {
       last_activity_date: new Date(x).toISOString()
