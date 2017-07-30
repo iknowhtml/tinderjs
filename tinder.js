@@ -224,8 +224,8 @@ function TinderClient() {
    * @param {String} userId the id of the user
    * @param {Function} callback the callback to invoke when the request completes
    */
-  this.like = function(userId, contentHash, callback) {
-    tinderGet('like/' + userId +'?content_hash=' + contentHash,
+  this.like = function(userId, callback) {
+    tinderGet('like/' + userId,
       null,
       makeTinderCallback(callback));
   };
