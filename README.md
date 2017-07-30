@@ -1,17 +1,7 @@
 # tinderjs for lit
 
-  Programmatic access to the Tinder API, modified for use with lit's api.
-
-#### Contribution ####
-
-tinderjs is a project that has a lot of potential if the power of the open-source community is harnessed. Come [join us on Slack](http://tinderjs.herokuapp.com) and view the [priorities list](https://github.com/tinderjs/tinderjs/wiki/Development-Priorities) to see how you can contribute, it is well appreciated!
-
-
-## Installation
-
-    $ npm install tinder
-
-
+  Programmatic access to the Tinder API, modified for use for iknowhtml.
+  
 ## Introduction
 
   tinderjs is a simple node.js wrapper around the Tinder API. Below is a simple example which gets a list of nearby profiles and prints them out:
